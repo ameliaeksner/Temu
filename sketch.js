@@ -14,11 +14,9 @@ function setup() {
 }
 
 function draw() {
-  if (scene === 1) {
+
     drawScene1();
-  } else if (scene === 2) {
-    drawScene2();
-  }
+  
 }
 
 function drawScene1() {
@@ -42,14 +40,6 @@ function drawScene1() {
   let y = height * 0.65 - 50 + yOffset;
 
   image(reka, x, y, szer, wys);
-}
-
-function drawScene2() {
-  background(50, 100, 200);
-  fill(255);
-  textAlign(CENTER, CENTER);
-  textSize(40);
-  text("To jest scena 2 🚀", width / 2, height / 2);
 }
 
 function mousePressed() {
