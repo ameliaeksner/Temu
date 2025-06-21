@@ -36,7 +36,6 @@ function draw() {
 }
 
 function mousePressed() {
-  // Sprawdź, czy kliknięto w obszar przycisku
   let przyciskX = width / 2;
   let przyciskY = height / 2;
   let przyciskW = przycisk.width / 2;
@@ -48,7 +47,7 @@ function mousePressed() {
     mouseY > przyciskY - przyciskH / 2 &&
     mouseY < przyciskY + przyciskH / 2
   ) {
-    window.location.href("https://used2rack.github.io/Temu/"); // podaj tutaj właściwy URL
+    window.location.href("https://used2rack.github.io/Temu/");
   }
 }
 
@@ -69,5 +68,6 @@ function mouseMoved() {
     cursor('default');
   }
 }
+
 
 
