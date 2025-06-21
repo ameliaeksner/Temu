@@ -35,7 +35,7 @@ function drawScene1() {
   let yOffset = map(noise(t + 100), 0, 1, -30, 30);
   t += 0.03;
 
-  let skala = 0.6;
+  let skala = 0.48; // Pomniejszona o 20%
   let szer = reka.width * skala;
   let wys = reka.height * skala;
   let x = width * 0.70 + 150 + xOffset;
@@ -68,8 +68,7 @@ function mousePressed() {
     ) {
       // Kliknięto przycisk – zmień scenę
       scene = 2;
-     
-      
+      window.location.href(""); // Możesz wpisać adres URL jeśli chcesz przekierować gdzieś zewnętrznie
     }
   }
 }
