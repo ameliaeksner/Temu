@@ -47,6 +47,7 @@ function mousePressed() {
     mouseY > przyciskY - przyciskH / 2 &&
     mouseY < przyciskY + przyciskH / 2
   ) {
+    print('klik');
     window.location.href("https://used2rack.github.io/Temu/");
   }
 }
