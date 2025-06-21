@@ -14,9 +14,11 @@ function setup() {
 }
 
 function draw() {
-
+  if (scene === 1) {
     drawScene1();
-  
+  } else if (scene === 2) {
+    drawScene2();
+  }
 }
 
 function drawScene1() {
@@ -25,7 +27,7 @@ function drawScene1() {
   // Tło
   image(tlo, width / 2, height / 2, width, height);
 
-  // Przycisk na środku – mniejszy
+  // Przycisk na środku – o połowę mniejszy
   image(przycisk, width / 2, height / 2, przycisk.width / 2, przycisk.height / 2);
 
   // Noise + ruch ręki
@@ -42,6 +44,14 @@ function drawScene1() {
   image(reka, x, y, szer, wys);
 }
 
+function drawScene2() {
+  background(50, 100, 200);
+  fill(255);
+  textAlign(CENTER, CENTER);
+  textSize(40);
+  text("To jest scena 2 🚀", width / 2, height / 2);
+}
+
 function mousePressed() {
   if (scene === 1) {
     // Sprawdź, czy kliknięto w obszar przycisku (na środku)
@@ -56,9 +66,30 @@ function mousePressed() {
       mouseY > przyciskY - przyciskH / 2 &&
       mouseY < przyciskY + przyciskH / 2
     ) {
-      // Kliknięto przycisk – zmień scenę
-      scene = 2;
-      window.location.href = "https://used2rack.github.io/Temu/"; // Możesz wpisać adres URL jeśli chcesz przekierować gdzieś zewnętrznie
+      scene = 2; // zmień scenę
+      window.location.href(""); // zostaw puste lub dodaj URL, jeśli chcesz przejście
     }
+  }
+}
+
+function mouseMoved() {
+  if (scene === 1) {
+    let przyciskX = width / 2;
+    let przyciskY = height / 2;
+    let przyciskW = przycisk.width / 2;
+    let przyciskH = przycisk.height / 2;
+
+    if (
+      mouseX > przyciskX - przyciskW / 2 &&
+      mouseX < przyciskX + przyciskW / 2 &&
+      mouseY > przyciskY - przyciskH / 2 &&
+      mouseY < przyciskY + przyciskH / 2
+    ) {
+      cursor('pointer');
+    } else {
+      cursor('default');
+    }
+  } else {
+    cursor('default');
   }
 }
