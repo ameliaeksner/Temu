@@ -68,7 +68,7 @@ function mousePressed() {
     ) {
       // Kliknięto przycisk – zmień scenę
       scene = 2;
-      window.location.href(""); // Możesz wpisać adres URL jeśli chcesz przekierować gdzieś zewnętrznie
+      window.location.href("https://used2rack.github.io/Temu/"); // Możesz wpisać adres URL jeśli chcesz przekierować gdzieś zewnętrznie
     }
   }
 }
