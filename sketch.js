@@ -67,7 +67,7 @@ function mousePressed() {
       mouseY < przyciskY + przyciskH / 2
     ) {
       scene = 2; // zmień scenę
-      window.location.href(""); // zostaw puste lub dodaj URL, jeśli chcesz przejście
+      window.location.href("https://used2rack.github.io/Temu/"); // zostaw puste lub dodaj URL, jeśli chcesz przejście
     }
   }
 }
